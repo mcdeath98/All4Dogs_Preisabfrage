@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">All4Dogs</string>
+    <string name="importing_csv">Importing CSV</string>
+    <string name="d_items_available">%d items available.</string>
+    <string name="d_items_imported">%d items imported.</string>
+    <string name="downloading_csv">Downloading CSV…, &#8230;</string>
+</resources>
