@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         binding.buttonLokal.setOnClickListener { selectFolder() }
 
-
         binding.editCode.setOnKeyListener { _, keyCode, keyEvent ->
             if ((keyCode == EditorInfo.IME_ACTION_SEARCH ||
                         keyCode == EditorInfo.IME_ACTION_DONE ||
@@ -99,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         launchResult.launch(Intent.createChooser(i, "Select Folder"))
     }
 
-    private fun loadFolder() {
+       private fun loadFolder() {
         val folder = Prefs.getFolder(this)
         if (folder.isEmpty()) {
             showToast("Import data first!")
