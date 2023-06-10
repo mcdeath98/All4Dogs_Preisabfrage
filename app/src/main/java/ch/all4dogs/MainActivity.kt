@@ -78,9 +78,9 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.titel2.setTextColor(Color.BLUE);
-        binding.titel2.setTypeface(null, Typeface.BOLD);
-        binding.titel2.setText(R.string.welcome_message);
+        binding.titel2.setTextColor(Color.BLUE)
+        binding.titel2.setTypeface(null, Typeface.BOLD)
+        binding.titel2.setText(R.string.welcome_message)
 
 
         binding.imageView.setImageResource(R.drawable.default_image)
@@ -169,7 +169,10 @@ class MainActivity : AppCompatActivity() {
                 } else {
 
                     binding.textName.text = product.name
-                    binding.textPrice.text = "CHF %.2f".format(product.price)
+                    val priceFormat = getString(R.string.text_price_format)
+                    val formattedPrice = priceFormat.format(product.price)
+                    binding.textPrice.text = formattedPrice
+
 
                     val filename = "${product.article}-1.jpg"
 
